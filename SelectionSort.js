@@ -1,5 +1,5 @@
 
-function selectionSort (array) {
+function selectionSort1 (array) {
   let ordered = []
   let run = array.length
 
@@ -24,4 +24,19 @@ function selectionHelper (array) {
   }
 
   return index
+}
+
+function selectionSort2(array) {
+	for(let i=0; i<array.length-1; i++){
+		let index = i
+		for(let j=i; j<array.length; j++){
+			if(array[j] < array[index]){
+				index = j
+			}
+		}
+		if(i<index){
+			[array[i], array[index]] = [array[index], array[i]]
+		}
+	}
+	return array
 }
