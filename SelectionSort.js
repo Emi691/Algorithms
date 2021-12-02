@@ -12,7 +12,7 @@ function selectionSort1 (array) {
   return ordered
 }
 
-function selectionHelper (array) {
+function selectionHelper1 (array) {
   let least = array[0]
   let index = 0
 
@@ -24,6 +24,16 @@ function selectionHelper (array) {
   }
 
   return index
+}
+
+function selectionHelper2 (array) {
+  let j = 0
+
+  for(let i=0; i<array.length; i++){
+    if(array[i] < array[j]) j = i
+  }
+
+  return j
 }
 
 function selectionSort2(array) {
