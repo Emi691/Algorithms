@@ -1,8 +1,9 @@
 
 function selectionSort (array) {
   let ordered = []
+  let run = array.length
 
-  for(let i=0; i<array.length; i++){
+  for(let i=0; i<run; i++){
     let smallest = selectionHelper(array)
     ordered.push(array[smallest])
     array.splice(smallest, 1)
