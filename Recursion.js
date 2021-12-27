@@ -5,4 +5,3 @@ function recursive(i, j){
 }
 
 
-recursive(1, 5)
