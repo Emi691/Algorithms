@@ -1,3 +1,4 @@
+
 function binarySearch (array, target) {
   let min = 0
   let max = array.length - 1

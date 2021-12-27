@@ -4,7 +4,7 @@ function selectionSort1 (array) {
   let run = array.length
 
   for(let i=0; i<run; i++){
-    let smallest = selectionHelper(array)
+    let smallest = selectionHelper1(array)
     ordered.push(array[smallest])
     array.splice(smallest, 1)
   }
