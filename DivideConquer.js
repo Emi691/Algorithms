@@ -13,12 +13,7 @@ function items(array){
 function maxValue(array){
   if(array.length < 2) return array[0]
   if(array.length < 1) return 0
-  let max = maxValue(array.splice(1))
-  if(array[0] > max){
-    return array[0]
-  }else{
-    return max
-  }
+  return array[0] > maxValue(array.slice(1)) ? array[0] : maxValue(array.slice(1))
 }
 
 console.log(maxValue(array))
