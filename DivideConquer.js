@@ -21,3 +21,6 @@ function max2(array){
   let maxSub = max2(array.slice(1))
   return array[0] > maxSub ? array[0] : maxSub
 }
+
+let array = [3, 1, 6, 4, 5, 2]
+console.log(max2(array))
