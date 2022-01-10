@@ -15,5 +15,9 @@ function max1(array){
 }
 
 function max2(array){
-  
+  if(array.length === 2){
+    return array[0] > array[1] ? array[0] : array[1]
+  }
+  let maxSub = max2(array.slice(1))
+  return array[0] > maxSub ? array[0] : maxSub
 }
