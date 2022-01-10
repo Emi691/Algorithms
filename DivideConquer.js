@@ -18,9 +18,10 @@ function max2(array){
   if(array.length === 2){
     return array[0] > array[1] ? array[0] : array[1]
   }
+  if(array.length < 2) return array[0]
   let maxSub = max2(array.slice(1))
   return array[0] > maxSub ? array[0] : maxSub
 }
 
-let array = [3, 1, 6, 4, 5, 2]
+let array = []
 console.log(max2(array))
