@@ -3,8 +3,8 @@ function sum(array){
   return array[0] + sum(array.slice(1))
 }
 
-function items(array){
-  if(array.length < 1) return 0
+function count(array){
+  if(array === []) return 0
   return 1 + items(array.slice(1))
 }
 
