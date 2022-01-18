@@ -12,6 +12,25 @@ function vertex(array){
     return 'no vertex'
 }
 
-let array = [2, 3, 4, 1]
+// naive solution has time complexity O(n)
 
-console.log(vertex(array))
+function vertexFast(array){
+    let i = 0, j = array.length-1
+    
+    while(i<=j){
+        let mid = Math.floor((j-i)/2) 
+        if(array[mid] > array[mid+1] && array[mid] < array[mid-1]){
+            return mid
+        }else if(array[mid] > array[mid+1]){
+            j = mid 
+        }else if(array[mid] < array[mid+1]){
+            i = mid
+        }
+    }
+
+    return i
+}
+
+let array = [1, 2, 3, 4]
+
+console.log(vertexFast(array))
